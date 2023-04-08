@@ -54,6 +54,7 @@ type (
 	}
 )
 
+// inits Twitter struct.
 // confPath: full-path to twitter config file
 func NewTwitter(confPath string) Twitter {
 
@@ -160,10 +161,8 @@ func (t Twitter) upload(paths ...string) []string {
 	return ids
 }
 
-// os.Args コマンドライン引数 [0]は実行ファイル名。
-// [1]はツイート・メッセージ。
-// [2]以降はアップロードしたい画像ファイルパス。任意。
-// 引数が無い場合（長さ1の場合）エラーにさせたいので、チェックしない
+// msg   : message to tweet.
+// paths : full-paths of images to upload
 func (t Twitter) Tweet(msg string, paths ...string) {
 
 	var ids []string // upload media_ids
