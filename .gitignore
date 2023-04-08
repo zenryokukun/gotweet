@@ -1,0 +1,18 @@
+# twitter credentialファイルもあるので、jsonは全て除外
+*.json
+
+# 画像は全てテスト
+*.JPG
+*.jpg
+*.png
+*.PNG
+*.jpeg
+*.JPEG
+
+# 実行ファイルは除外
+# Windows
+*.exe
+# Linux
+go-tweet
+
+*.sh
